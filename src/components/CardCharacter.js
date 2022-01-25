@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CardCharacter(props) {
   return (
     <li>
-      <Link to="/character/xxx">
+      <Link to={`/character/${props.index}`}>
         <img
           className="logo"
           src={

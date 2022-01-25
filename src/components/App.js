@@ -34,6 +34,11 @@ function App() {
     setfilterHouseCharacters(ev.currentTarget.value);
   };
 
+  const renderDetailCharacter = (props) => {
+    const index = props.match.params.index;
+    return <DetailCharacter oneCharacter={characters[index]}/>
+  }
+
   // -----------------//-------------//-------------//
 
   return (
@@ -62,9 +67,7 @@ function App() {
             />
           </Route>
 
-          <Route path="/character/:index">
-            <DetailCharacter />
-          </Route>
+          <Route path="/character/:index" render={renderDetailCharacter}/>
         </Switch>
       </main>
     </div>

@@ -11,7 +11,7 @@ function ListCharacter(props) {
           .includes(props.filterCharacters.toLowerCase());
       })
       .map((oneCharacter, index) => {
-        return <CardCharacter key={index} oneCharacter={oneCharacter} />;
+        return <CardCharacter key={index} oneCharacter={oneCharacter} index={index} />;
       });
   };
 
