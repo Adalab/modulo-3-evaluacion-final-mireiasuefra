@@ -1,5 +1,2 @@
-# My React Starter Kit ✨
-
-- Sass dependency
-- `npm run githubpages`
-- Services: API and local storage
+# Buscador de perosnajes de Harry Potter
+## Evaluación final del módulo 3: React
