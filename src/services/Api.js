@@ -1,13 +1,13 @@
-const callToApi = (casa) => {
-  return fetch("http://hp-api.herokuapp.com/api/characters/house/gryffindor")
+const callToApi = (filterHouseCharacters) => {
+  return fetch(`http://hp-api.herokuapp.com/api/characters/house/${filterHouseCharacters}`)
     .then((response) => response.json())
     .then((data) => {
-      return data.results.map((oneCharacter) => {
+      return data.map((oneCharacter) => {
         return {
           name: oneCharacter.name,
           house: oneCharacter.house,
           species: oneCharacter.species,
-          status: oneCharacter.status,
+          alive: oneCharacter.alive,
           gender: oneCharacter.gender,
           origin: oneCharacter.origin,
           image: oneCharacter.image,
