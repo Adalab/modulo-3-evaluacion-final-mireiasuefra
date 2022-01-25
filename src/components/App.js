@@ -5,6 +5,9 @@ import Header from "./Header";
 import FilterNameCharacter from "./FilterNameCharacter";
 import FilterHouseCharacter from "./FilterHouseCharacter";
 import ButtonReset from "./ButtonReset";
+import DetailCharacter from "./DetailCharacter";
+import { Route, Switch } from "react-router-dom";
+import ListCharacter from "./ListCharacter";
 
 function App() {
   // Variables ESTADO:
@@ -20,32 +23,6 @@ function App() {
     });
     //cada vez que cambia la variable filterHouseCharacters se ejecuta lo que hay dentro del useEffect: la llamada a la api, utilizando el  filterHouseCharacters como parámetro
   }, [filterHouseCharacters]);
-
-  //Pintado de las tarjetas con los personajes:
-  const renderCardCharacter = () => {
-    return characters
-      .filter((oneCharacter) => {
-        return oneCharacter.name
-          .toLowerCase()
-          .includes(filterCharacters.toLowerCase());
-      })
-      .map((oneCharacter, index) => {
-        return (
-          <li key={index}>
-            <img
-              className="logo"
-              src={
-                oneCharacter.image ||
-                "https://via.placeholder.com/210x295/ffffff/666666/?text=Harry Potter"
-              }
-              alt="imagen de la card"
-            ></img>
-            <p>{oneCharacter.name}</p>
-            <p>{oneCharacter.house}</p>
-          </li>
-        );
-      });
-  };
 
   //Para buscar personaje:
   const handleSearchFilterCharacter = (ev) => {
@@ -63,20 +40,32 @@ function App() {
     <div className="bg-page">
       <Header />
       <main>
-        <form>
-          <FilterNameCharacter
-            filterCharacters={filterCharacters}
-            handleSearchFilterCharacter={handleSearchFilterCharacter}
-          />
-          <FilterHouseCharacter
-            filterHouseCharacters={filterHouseCharacters}
-            handleSearchFilterHouseCharacter={handleSearchFilterHouseCharacter}
-          />
-          <ButtonReset />
-          <section>
-            <ul>{renderCardCharacter()}</ul>
-          </section>
-        </form>
+        <Switch>
+          <Route exact path="/">
+            <form>
+              <FilterNameCharacter
+                filterCharacters={filterCharacters}
+                handleSearchFilterCharacter={handleSearchFilterCharacter}
+              />
+              <FilterHouseCharacter
+                filterHouseCharacters={filterHouseCharacters}
+                handleSearchFilterHouseCharacter={
+                  handleSearchFilterHouseCharacter
+                }
+              />
+              <ButtonReset />
+            </form>
+
+            <ListCharacter
+              characters={characters}
+              filterCharacters={filterCharacters}
+            />
+          </Route>
+
+          <Route path="/character/:index">
+            <DetailCharacter />
+          </Route>
+        </Switch>
       </main>
     </div>
   );
