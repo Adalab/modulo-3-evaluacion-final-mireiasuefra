@@ -1,6 +1,8 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
-import callToApi from "../services/Api";
+import callToApi from "../services/api";
+import Header from "./Header";
+
 
 function App() {
   // Variables ESTADO:
@@ -8,20 +10,24 @@ function App() {
   const [characters, setCharacters] = useState([]);
 
   // Llamada a la API:
-
   useEffect(() => {
-    // Dentro de useEffect llamamos al API
-
     callToApi().then((response) => {
       setCharacters(response);
     });
   }, []);
 
-
-
   // -----------------//-------------//-------------//
 
-  return <div> hola mundo </div>;
+  return (
+
+  
+   <div className="bg-page">
+      <Header/>
+
+    
+    
+  </div>
+  );
 }
 
 export default App;
