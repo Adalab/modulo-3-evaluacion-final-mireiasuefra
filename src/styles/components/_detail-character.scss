@@ -1,23 +1,71 @@
 .detail-character {
-    &__card {
-        padding: 20px;
-        display: flex;
+  &__link {
+    font-family: $principal-font;
+    font-size: 16px;
+    color: rgb(240, 203, 41);
+  }
 
-        &--gryffindor {
-            background-color: red;
-        }
+  &__image {
+    width: 200px;
+    height: 330px;
+    border-radius: 10px;
+    margin-right: 30px;
+  }
 
-        &--slytherin {
-            background-color: green;
-        }
+  &__title {
+    font-family: $principal-font;
+    font-size: 50px;
+    color: rgb(39, 38, 38);
+  }
 
-        &--hufflepuff {
-            background-color: yellow;
-        }
+  &__info-name {
+    font-family: $title-font;
+    font-size: 100px;
 
-        &--ravenclaw {
-            background-color: blue;
-        }
+    &--gryffindor {
+      color: $color-gryffinfor-2;
     }
-}
 
+    &--slytherin {
+      color: $color-slytherin-2;
+    }
+
+    &--hufflepuff {
+      color: $color-hufflepuff-2;
+    }
+
+    &--ravenclaw {
+      color: $color-ravenclaw-2;
+    }
+  }
+
+  &__info-item {
+    font-family: $principal-font;
+    font-size: 30px;
+  }
+
+  &__card {
+    padding: 20px;
+    display: flex;
+
+    &--gryffindor {
+      background-color: $color-gryffinfor-1;
+      color: $color-gryffinfor-2;
+    }
+
+    &--slytherin {
+      background-color: $color-slytherin-1;
+      color: $color-slytherin-2;
+    }
+
+    &--hufflepuff {
+      background-color: $color-hufflepuff-1;
+      color: $color-hufflepuff-2;
+    }
+
+    &--ravenclaw {
+      background-color: $color-ravenclaw-1;
+      color: $color-ravenclaw-2;
+    }
+  }
+}

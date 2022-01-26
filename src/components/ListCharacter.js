@@ -27,8 +27,8 @@ function ListCharacter(props) {
   };
 
   return (
-    <section>
-      <ul>{renderCardCharacter()}</ul>
+    <section className="list-character">
+      <ul className="list-character__list">{renderCardCharacter()}</ul>
     </section>
   );
 }

@@ -98,7 +98,7 @@ function DetailCharacter(props) {
           alt="imagen de la card"
         ></img>
         <div className="detail-character__info">
-          <p className="detail-character__info-item">
+          <p className={`detail-character__info-name detail-character__info-name--${props.oneCharacter.house.toLowerCase()}`}>
             {props.oneCharacter.name}
           </p>
           <p className="detail-character__info-item">
