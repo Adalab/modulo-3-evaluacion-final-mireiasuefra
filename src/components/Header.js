@@ -1,5 +1,4 @@
 import logoHeader from "../images/logo-HP.png"
-import "../styles/components/_app.scss";
 
 function Header() {
   return (

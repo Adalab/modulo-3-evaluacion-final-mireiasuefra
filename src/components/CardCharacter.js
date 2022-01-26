@@ -1,4 +1,3 @@
-import "../styles/components/_app.scss";
 import { Link } from "react-router-dom";
 
 function CardCharacter(props) {

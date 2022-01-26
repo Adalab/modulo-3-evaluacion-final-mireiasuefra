@@ -1,0 +1,23 @@
+.detail-character {
+    &__card {
+        padding: 20px;
+        display: flex;
+
+        &--gryffindor {
+            background-color: red;
+        }
+
+        &--slytherin {
+            background-color: green;
+        }
+
+        &--hufflepuff {
+            background-color: yellow;
+        }
+
+        &--ravenclaw {
+            background-color: blue;
+        }
+    }
+}
+

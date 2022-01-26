@@ -1,5 +1,3 @@
-import "../styles/components/_app.scss";
-
 function Header(props) {
 
   return (

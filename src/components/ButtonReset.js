@@ -1,6 +1,3 @@
-import "../styles/components/_app.scss";
-
-
 function ButtonReset(props) {
 
   const resetBtn = () => {

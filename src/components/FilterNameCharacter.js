@@ -1,5 +1,3 @@
-
-
 function FilterNameCharacter(props) {
   return (
     <>

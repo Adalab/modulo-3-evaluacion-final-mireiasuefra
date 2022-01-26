@@ -1,4 +1,3 @@
-import "../styles/components/_app.scss";
 import CardCharacter from "./CardCharacter";
 
 function ListCharacter(props) {
