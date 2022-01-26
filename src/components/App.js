@@ -1,6 +1,7 @@
 import "../styles/App.scss";
 import { useEffect, useState } from "react";
 import callToApi from "../services/api";
+import ls from "../services/localStorage";
 import Header from "./Header";
 import FilterNameCharacter from "./FilterNameCharacter";
 import FilterHouseCharacter from "./FilterHouseCharacter";
@@ -11,10 +12,13 @@ import ListCharacter from "./ListCharacter";
 
 function App() {
   // Variables ESTADO:
-  const [characters, setCharacters] = useState([]);
-  const [filterCharacters, setFilterCharacters] = useState("");
-  const [filterHouseCharacters, setfilterHouseCharacters] =
-    useState("gryffindor");
+  const [characters, setCharacters] = useState(ls.get("caracters", []));
+  const [filterCharacters, setFilterCharacters] = useState(
+    ls.get("filterCharacters", "")
+  );
+  const [filterHouseCharacters, setfilterHouseCharacters] = useState(
+    ls.get("filterHouseCharacters", "gryffindor")
+  );
 
   // Llamada a la API:
   useEffect(() => {
@@ -23,6 +27,13 @@ function App() {
     });
     //cada vez que cambia la variable filterHouseCharacters se ejecuta lo que hay dentro del useEffect: la llamada a la api, utilizando el  filterHouseCharacters como parámetro
   }, [filterHouseCharacters]);
+
+  // Guardar en el local storage
+  useEffect(() => {
+    ls.set("characters", characters);
+    ls.set("filterCharacters", filterCharacters);
+    ls.set("filterHouseCharacters", filterHouseCharacters);
+  }, [characters, filterCharacters, filterHouseCharacters]);
 
   //Para buscar personaje:
   const handleSearchFilterCharacter = (ev) => {
@@ -36,8 +47,8 @@ function App() {
 
   const renderDetailCharacter = (props) => {
     const index = props.match.params.index;
-    return <DetailCharacter oneCharacter={characters[index]}/>
-  }
+    return <DetailCharacter oneCharacter={characters[index]} />;
+  };
 
   // -----------------//-------------//-------------//
 
@@ -47,7 +58,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <form onSubmit={(ev)=>ev.preventDefault()}>
+            <form onSubmit={(ev) => ev.preventDefault()}>
               <FilterNameCharacter
                 filterCharacters={filterCharacters}
                 handleSearchFilterCharacter={handleSearchFilterCharacter}
@@ -58,7 +69,10 @@ function App() {
                   handleSearchFilterHouseCharacter
                 }
               />
-              <ButtonReset />
+              <ButtonReset
+                ResetCharacters={setFilterCharacters}
+                ResetHouseCharacters={setfilterHouseCharacters}
+              />
             </form>
 
             <ListCharacter
@@ -67,7 +81,7 @@ function App() {
             />
           </Route>
 
-          <Route path="/character/:index" render={renderDetailCharacter}/>
+          <Route path="/character/:index" render={renderDetailCharacter} />
         </Switch>
       </main>
     </div>

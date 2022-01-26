@@ -9,7 +9,7 @@ function ListCharacter(props) {
     const charactersFiltered = props.characters.filter((oneCharacter) => {
       return oneCharacter.name
         .toLowerCase()
-        .includes(props.filterCharacters.toLowerCase());
+        .includes(props.filterCharacters.toLocaleLowerCase());
     });
 
     if (charactersFiltered.length > 0) {

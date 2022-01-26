@@ -1,8 +1,14 @@
 import "../styles/components/_app.scss";
 
 
-function Header() {
-  return <button>Reset</button>;
+function ButtonReset(props) {
+
+  const resetBtn = () => {
+    props.setFilterCharacters('');
+    props.setfilterHouseCharacters('gryffindor');
+    };
+
+  return <button onClick={resetBtn}>Reset</button>;
 }
 
-export default Header;
+export default ButtonReset;
