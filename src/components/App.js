@@ -47,7 +47,14 @@ function App() {
 
   const renderDetailCharacter = (props) => {
     const index = props.match.params.index;
-    return <DetailCharacter oneCharacter={characters[index]} />;
+    const charactersFiltered = characters.filter((oneCharacter) => {
+      return oneCharacter.name
+        .toLowerCase()
+        .includes(filterCharacters.toLocaleLowerCase());
+    });
+
+
+    return <DetailCharacter oneCharacter={charactersFiltered[index]} />;
   };
 
   // -----------------//-------------//-------------//
