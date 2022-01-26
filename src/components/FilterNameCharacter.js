@@ -9,7 +9,7 @@ function FilterNameCharacter(props) {
         name="name"
         id="name"
         placeholder="Busca tu personaje"
-        value={props.filterCharacters}
+        value={props.filterCharacters} 
         onChange={props.handleSearchFilterCharacter}
       />
     </>

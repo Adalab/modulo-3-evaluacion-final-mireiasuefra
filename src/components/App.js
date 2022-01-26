@@ -47,7 +47,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <form>
+            <form onSubmit={(ev)=>ev.preventDefault()}>
               <FilterNameCharacter
                 filterCharacters={filterCharacters}
                 handleSearchFilterCharacter={handleSearchFilterCharacter}
