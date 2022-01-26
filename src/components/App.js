@@ -12,7 +12,7 @@ import ListCharacter from "./ListCharacter";
 
 function App() {
   // Variables ESTADO:
-  const [characters, setCharacters] = useState(ls.get("caracters", []));
+  const [characters, setCharacters] = useState(ls.get("characters", []));
   const [filterCharacters, setFilterCharacters] = useState(
     ls.get("filterCharacters", "")
   );
@@ -70,8 +70,8 @@ function App() {
                 }
               />
               <ButtonReset
-                ResetCharacters={setFilterCharacters}
-                ResetHouseCharacters={setfilterHouseCharacters}
+                setFilterCharacters={setFilterCharacters}
+                setfilterHouseCharacters={setfilterHouseCharacters}
               />
             </form>
 
@@ -82,6 +82,11 @@ function App() {
           </Route>
 
           <Route path="/character/:index" render={renderDetailCharacter} />
+
+          <Route>
+            <h2>Error 404</h2>
+          </Route>
+
         </Switch>
       </main>
     </div>

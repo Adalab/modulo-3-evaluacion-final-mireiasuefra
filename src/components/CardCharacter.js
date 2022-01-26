@@ -9,7 +9,7 @@ function CardCharacter(props) {
           className="logo"
           src={
             props.oneCharacter.image ||
-            "https://via.placeholder.com/210x295/ffffff/666666/?text=Harry Potter"
+            `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.oneCharacter.name}`
           }
           alt="imagen de la card"
         ></img>
