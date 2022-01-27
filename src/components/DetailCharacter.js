@@ -95,7 +95,7 @@ function DetailCharacter(props) {
           className="detail-character__image"
           src={
             props.oneCharacter.image ||
-            "https://www.forsyths-online.co.uk/images/product/10437-cst1hp11-3-600-1524833818.jpg"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqYhuFXrujA0fktSUXTdFeBXEz1Ar7as3KEgwzCMYbWjl8h_a2_BYUdRkyso7suM5bM94&usqp=CAU"
           }
           alt="imagen de la card"
         ></img>
