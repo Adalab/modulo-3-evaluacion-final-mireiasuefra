@@ -91,7 +91,7 @@ function App() {
           <Route path="/character/:index" render={renderDetailCharacter} />
 
           <Route>
-            <h2>Error 404</h2>
+            <h2 className="error-404">Error 404</h2>
           </Route>
 
         </Switch>
