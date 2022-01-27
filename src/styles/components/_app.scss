@@ -1,15 +1,35 @@
 .bg-page {
-    background-image: url(../../images/bg-filters.jpg);
-    background-size: cover;
-    height: 100%;
-    min-height: 100vh;
+  background-image: url(../../images/bg-filters.jpg);
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
 }
 
-.error-404 {
+.error {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 110px;
+    
+  &__404 {
+  
+    margin-top: 80px;
     font-size: 100px;
     color: $color-gryffinfor-1;
+  }
+
+  &__link {
+    font-family: $principal-font;
+    font-size: 16px;
+    color: $color-gryffinfor-3;
+    border: 2px solid $color-gryffinfor-1;
+    background-color: $color-gryffinfor-1;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
 }

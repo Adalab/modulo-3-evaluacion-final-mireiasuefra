@@ -7,7 +7,7 @@ import FilterNameCharacter from "./FilterNameCharacter";
 import FilterHouseCharacter from "./FilterHouseCharacter";
 import ButtonReset from "./ButtonReset";
 import DetailCharacter from "./DetailCharacter";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import ListCharacter from "./ListCharacter";
 
 function App() {
@@ -53,7 +53,6 @@ function App() {
         .includes(filterCharacters.toLocaleLowerCase());
     });
 
-
     return <DetailCharacter oneCharacter={charactersFiltered[index]} />;
   };
 
@@ -91,9 +90,13 @@ function App() {
           <Route path="/character/:index" render={renderDetailCharacter} />
 
           <Route>
-            <h2 className="error-404">Error 404</h2>
+            <div className ="error">
+            <Link className="error__link" to="/">
+              VOLVER
+            </Link>
+            <h2 className="error__404">Error 404</h2>
+            </div>
           </Route>
-
         </Switch>
       </main>
     </div>
