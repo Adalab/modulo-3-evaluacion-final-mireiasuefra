@@ -1,0 +1,15 @@
+.filter-house-character {
+    display: flex;
+    font-family: $principal-font;
+    font-size: 26px;
+    justify-content: center;
+    margin-top: 20px;
+
+  &__select-serch-house {
+      margin-left: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 10px;
+      border: none;
+  }
+}

@@ -1,0 +1,17 @@
+.reset {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+
+    &__button {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 6px;
+        border: none;
+        background-color: rgb(240, 203, 41);
+        cursor: pointer;
+    }
+}

@@ -4,5 +4,11 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    &__not-found {
+        font-family: $principal-font;
+        color: $color-gryffinfor-1;
+        font-size: 75px;
+    }
     
 }

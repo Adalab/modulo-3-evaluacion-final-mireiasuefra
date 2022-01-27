@@ -22,7 +22,8 @@ function ListCharacter(props) {
         );
       });
     } else {
-      return "No hemos encontrado personajes con ese nombre";
+      return <p className="list-character__not-found">No hemos encontrado personajes con ese nombre</p>
+      ;
     }
   };
 

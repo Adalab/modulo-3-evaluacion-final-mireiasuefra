@@ -1,9 +1,10 @@
 function Header(props) {
 
   return (
-    <>
-      <label htmlFor="house">Selecciona la casa:</label>
+    <div className="filter-house-character">
+      <label className="filter-house-character__serch-house" htmlFor="house">Selecciona la casa:</label>
       <select
+        className="filter-house-character__select-serch-house"
         name="house"
         id="house"
         value={props.filterHouseCharacters}
@@ -14,7 +15,7 @@ function Header(props) {
         <option value="hufflepuff">Hufflepuff</option>
         <option value="ravenclaw">Ravenclaw</option>
       </select>
-    </>
+    </div>
   );
 }
 

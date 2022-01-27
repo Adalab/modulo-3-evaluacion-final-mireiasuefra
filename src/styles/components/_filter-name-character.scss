@@ -1,14 +1,14 @@
 .filter-name-character {
+    display: flex;
+    font-family: $principal-font;
+    font-size: 26px;
+    justify-content: center;
 
-
-&__serch-character{
-
-
-}
-
-&__input-serch-character{
-
-
-}
-
+  &__input-serch-character {
+      margin-left: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-radius: 10px;
+      border: none;
+  }
 }
