@@ -1,15 +1,17 @@
 .filter-house-character {
-    display: flex;
-    font-family: $principal-font;
-    font-size: 26px;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  font-family: $principal-font;
+  font-size: 40px;
+  justify-content: center;
+  margin-top: 20px;
 
   &__select-serch-house {
-      margin-left: 15px;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-radius: 10px;
-      border: none;
+    font-family: $principal-font;
+    font-size: 20px;
+    margin-left: 30px;
+    padding-left: 30px;
+    padding-right: 15px;
+    border-radius: 10px;
+    border: none;
   }
 }

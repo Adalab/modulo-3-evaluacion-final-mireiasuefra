@@ -11,7 +11,10 @@
         padding-bottom: 5px;
         border-radius: 6px;
         border: none;
-        background-color: rgb(240, 203, 41);
+        background-color: $color-gryffinfor-1;
+        color: $color-gryffinfor-3;
+        font-family: $principal-font;
+        font-size: 30px;
         cursor: pointer;
     }
 }
