@@ -15,6 +15,10 @@ Si te apetece echarle un vistazo puedez hacerlo pinchando aquí:
 
 
 
+
+    PD: no es un diseño responsive.
+
+
 ## Técnologías ulitizadas para la realización del ejercicio:
 
     - React
@@ -22,6 +26,8 @@ Si te apetece echarle un vistazo puedez hacerlo pinchando aquí:
     - Css
     - Html
     - Sass
+
+
 
 
 ## Si quieres saber mas de mi:
