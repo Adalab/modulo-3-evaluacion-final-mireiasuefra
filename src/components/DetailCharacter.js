@@ -84,7 +84,9 @@ function DetailCharacter(props) {
 
   return (
     <section className="detail-character">
-      <Link className="detail-character__link" to="/">VOLVER</Link>
+      <Link className="detail-character__link" to="/">
+        VOLVER
+      </Link>
       <h2 className="detail-character__title">Detalle del personaje</h2>
       <div
         className={`detail-character__card detail-character__card--${props.oneCharacter.house.toLowerCase()}`}
@@ -93,12 +95,14 @@ function DetailCharacter(props) {
           className="detail-character__image"
           src={
             props.oneCharacter.image ||
-            `https://via.placeholder.com/210x295/ffffff/666666/?text=${props.oneCharacter.name}`
+            "https://www.forsyths-online.co.uk/images/product/10437-cst1hp11-3-600-1524833818.jpg"
           }
           alt="imagen de la card"
         ></img>
         <div className="detail-character__info">
-          <p className={`detail-character__info-name detail-character__info-name--${props.oneCharacter.house.toLowerCase()}`}>
+          <p
+            className={`detail-character__info-name detail-character__info-name--${props.oneCharacter.house.toLowerCase()}`}
+          >
             {props.oneCharacter.name}
           </p>
           <p className="detail-character__info-item">
