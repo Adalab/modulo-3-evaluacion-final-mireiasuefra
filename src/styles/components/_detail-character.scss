@@ -1,4 +1,10 @@
 .detail-character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+
   &__link {
     font-family: $principal-font;
     font-size: 16px;
@@ -21,7 +27,7 @@
   &__info-name {
     font-family: $title-font;
     font-size: 100px;
-
+    
     &--gryffindor {
       color: $color-gryffinfor-2;
     }
@@ -47,25 +53,27 @@
   &__card {
     padding: 20px;
     display: flex;
+    border-radius: 15px;
+    align-items: center;
 
     &--gryffindor {
       background-color: $color-gryffinfor-1;
-      color: $color-gryffinfor-2;
+      color: $color-gryffinfor-3;
     }
 
     &--slytherin {
       background-color: $color-slytherin-1;
-      color: $color-slytherin-2;
+      color: $color-slytherin-3;
     }
 
     &--hufflepuff {
       background-color: $color-hufflepuff-1;
-      color: $color-hufflepuff-2;
+      color: $color-hufflepuff-3;
     }
 
     &--ravenclaw {
       background-color: $color-ravenclaw-1;
-      color: $color-ravenclaw-2;
+      color: $color-ravenclaw-3;
     }
   }
 }

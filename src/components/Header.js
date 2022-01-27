@@ -2,8 +2,8 @@ import logoHeader from "../images/logo-HP.png"
 
 function Header() {
   return (
-    <header>
-      <img className="logo" src={logoHeader} alt="Logo Harry Potter"></img>
+    <header className="header">
+      <img className="header__img" src={logoHeader} alt="Logo Harry Potter"></img>
     </header>
   );
 }

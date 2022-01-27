@@ -3,6 +3,7 @@
   border-radius: 10px;
   padding: 3px;
   margin: 5px;
+  text-align: center;
 
   &--gryffindor {
     background-color: $color-gryffinfor-1;
@@ -31,23 +32,23 @@
   }
 
   &__info-name {
-    font-family: $title-font;
-    font-size: 50px;
+    font-family:$principal-font;
+    font-size: 35px;
 
     &--gryffindor {
-      color: $color-gryffinfor-2;
+      color: $color-gryffinfor-3;
     }
 
     &--slytherin {
-      color: $color-slytherin-2;
+      color: $color-slytherin-3;
     }
 
     &--hufflepuff {
-      color: $color-hufflepuff-2;
+      color: $color-hufflepuff-3;
     }
 
     &--ravenclaw {
-      color: $color-ravenclaw-2;
+      color: $color-ravenclaw-3;
     }
   }
 
