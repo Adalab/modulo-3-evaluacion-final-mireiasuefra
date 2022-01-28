@@ -24,6 +24,7 @@ const callToApi = (filterHouseCharacters) => {
             gender: oneCharacter.gender,
             origin: oneCharacter.origin,
             image: oneCharacter.image,
+            student: oneCharacter.hogwartsStudent,
           };
         });
     });

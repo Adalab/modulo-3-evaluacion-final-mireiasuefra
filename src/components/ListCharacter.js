@@ -5,11 +5,16 @@ function ListCharacter(props) {
 
   //aqui saco el filtro fuera. luego recorro el array, y si hay info (>0) te pinta esa info... y si no la hay (<0) te devuelve el mensaje de no encontrar personaje
   const renderCardCharacter = () => {
-    const charactersFiltered = props.characters.filter((oneCharacter) => {
+    const charactersFiltered = props.characters
+    .filter((oneCharacter) => {
       return oneCharacter.name
         .toLowerCase()
         .includes(props.filterCharacters.toLocaleLowerCase());
+    })
+    .filter((oneCharacter) => {
+      return oneCharacter.student === props.newFilter
     });
+
 
     if (charactersFiltered.length > 0) {
       return charactersFiltered.map((oneCharacter, index) => {

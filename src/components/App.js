@@ -9,6 +9,7 @@ import ButtonReset from "./ButtonReset";
 import DetailCharacter from "./DetailCharacter";
 import { Route, Switch, Link } from "react-router-dom";
 import ListCharacter from "./ListCharacter";
+import FilterNewCharacter from "./FilterNewCharacter";
 
 function App() {
   // Variables ESTADO:
@@ -19,6 +20,8 @@ function App() {
   const [filterHouseCharacters, setfilterHouseCharacters] = useState(
     ls.get("filterHouseCharacters", "gryffindor")
   );
+
+  const [newFilter, setNewFilter] = useState(true);
 
   // Llamada a la API:
   useEffect(() => {
@@ -56,6 +59,12 @@ function App() {
     return <DetailCharacter oneCharacter={charactersFiltered[index]} />;
   };
 
+
+  const handleClick = (ev) => {
+    setNewFilter(ev.currentTarget.cheked);
+  };
+
+
   // -----------------//-------------//-------------//
 
   return (
@@ -75,6 +84,11 @@ function App() {
                   handleSearchFilterHouseCharacter
                 }
               />
+
+              <FilterNewCharacter 
+              handleClick={handleClick}
+              newFilter={newFilter}
+              />
               <ButtonReset
                 setFilterCharacters={setFilterCharacters}
                 setfilterHouseCharacters={setfilterHouseCharacters}
@@ -84,6 +98,7 @@ function App() {
             <ListCharacter
               characters={characters}
               filterCharacters={filterCharacters}
+              newFilter = {newFilter}
             />
           </Route>
 
