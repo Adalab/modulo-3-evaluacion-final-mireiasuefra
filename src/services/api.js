@@ -5,7 +5,7 @@ const callToApi = (filterHouseCharacters) => {
     .then((response) => response.json())
     .then((data) => {
       return data
-        .sort((aCharacter, bCharacter) => {
+          .sort((aCharacter, bCharacter) => {
           if (aCharacter.name < bCharacter.name) {
             return -1;
           }

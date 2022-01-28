@@ -14,21 +14,21 @@ const get = (key, defaultValue) => {
   };
   
 
-  const remove = key => {
-    localStorage.removeItem(key);
-  };
+  // const remove = key => {
+  //   localStorage.removeItem(key);
+  // };
   
 
-  const clear = () => {
-    localStorage.clear();
-  };
+  // const clear = () => {
+  //   localStorage.clear();
+  // };
   
  
   const objectToExport = {
     get: get,
     set: set,
-    remove: remove,
-    clear: clear
+    //remove: remove,
+    //clear: clear
   };
   
   

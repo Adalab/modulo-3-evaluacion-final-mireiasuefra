@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function CardCharacter(props) {
   return (
     <li
-      className={`card-character card-character--${props.oneCharacter.house.toLowerCase()}`}
+      className={`card-character card-character--${props.oneCharacter.house.toLocaleLowerCase()}`}
     >
       <Link to={`/character/${props.index}`}>
         <img
@@ -17,7 +17,7 @@ function CardCharacter(props) {
       </Link>
       <div className="card-character__info">
         <p
-          className={`card-character__info-name card-character__info-name--${props.oneCharacter.house.toLowerCase()}`}
+          className={`card-character__info-name card-character__info-name--${props.oneCharacter.house.toLocaleLowerCase()}`}
         >
           {props.oneCharacter.name}
         </p>

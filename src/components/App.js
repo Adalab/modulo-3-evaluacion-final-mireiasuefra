@@ -45,11 +45,14 @@ function App() {
     setfilterHouseCharacters(ev.currentTarget.value);
   };
 
+  // para pintar la card en detalle de cada personaje.
   const renderDetailCharacter = (props) => {
     const index = props.match.params.index;
+
+    // aquí vuelvo a filtrar porque al filtrar por nombre, hay una lista mas pequeña que otra y no coinciden los tamaños.
     const charactersFiltered = characters.filter((oneCharacter) => {
       return oneCharacter.name
-        .toLowerCase()
+        .toLocaleLowerCase()
         .includes(filterCharacters.toLocaleLowerCase());
     });
 
@@ -84,17 +87,18 @@ function App() {
             <ListCharacter
               characters={characters}
               filterCharacters={filterCharacters}
+              //aqui no se mete el de hose porque viene de la API ya filtrado
             />
           </Route>
 
           <Route path="/character/:index" render={renderDetailCharacter} />
 
           <Route>
-            <div className ="error">
-            <Link className="error__link" to="/">
-              VOLVER
-            </Link>
-            <h2 className="error__404">Error 404</h2>
+            <div className="error">
+              <Link className="error__link" to="/">
+                VOLVER
+              </Link>
+              <h2 className="error__404">Error 404</h2>
             </div>
           </Route>
         </Switch>

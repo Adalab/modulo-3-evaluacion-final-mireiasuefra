@@ -89,7 +89,7 @@ function DetailCharacter(props) {
       </Link>
       <h2 className="detail-character__title">Detalle del personaje</h2>
       <div
-        className={`detail-character__card detail-character__card--${props.oneCharacter.house.toLowerCase()}`}
+        className={`detail-character__card detail-character__card--${props.oneCharacter.house.toLocaleLowerCase()}`}
       >
         <img
           className="detail-character__image"
@@ -101,12 +101,12 @@ function DetailCharacter(props) {
         ></img>
         <div className="detail-character__info">
           <p
-            className={`detail-character__info-name detail-character__info-name--${props.oneCharacter.house.toLowerCase()}`}
+            className={`detail-character__info-name detail-character__info-name--${props.oneCharacter.house.toLocaleLowerCase()}`}
           >
             {props.oneCharacter.name}
           </p>
           <p className="detail-character__info-item">
-            Personaje: {renderAlive()}{" "}
+            Personaje: {renderAlive()}
           </p>
           <p className="detail-character__info-item">
             Especie: {renderSpecies()}
@@ -115,7 +115,7 @@ function DetailCharacter(props) {
             Genero: {renderGender()}
           </p>
           <p className="detail-character__info-item">
-            Casa: {props.oneCharacter.house}{" "}
+            Casa: {props.oneCharacter.house}
             <FontAwesomeIcon icon={faHatWizard} />
           </p>
         </div>

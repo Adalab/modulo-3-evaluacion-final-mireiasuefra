@@ -4,6 +4,8 @@ function ListCharacter(props) {
   //Pintado de las tarjetas con los personajes:
 
   //aqui saco el filtro fuera. luego recorro el array, y si hay info (>0) te pinta esa info... y si no la hay (<0) te devuelve el mensaje de no encontrar personaje
+
+  
   const renderCardCharacter = () => {
     const charactersFiltered = props.characters.filter((oneCharacter) => {
       return oneCharacter.name
@@ -22,7 +24,7 @@ function ListCharacter(props) {
         );
       });
     } else {
-      return <p className="list-character__not-found">No hemos encontrado personajes con ese nombre</p>
+      return <p className="list-character__not-found">{`No hemos encontrado personajes con el nombre:  ${props.filterCharacters}`}</p>
       ;
     }
   };
