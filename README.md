@@ -11,12 +11,14 @@ Apoyandome en la API facilitada (https://hp-api.herokuapp.com/), he generado un 
 
 Si te apetece echarle un vistazo puedez hacerlo pinchando aquí: 
 
-            http://beta.adalab.es/modulo-3-evaluacion-final-mireiasuefra/#/
+👇🏼👇🏼👇🏼
+
+ http://beta.adalab.es/modulo-3-evaluacion-final-mireiasuefra/#/
 
 
 
 
-    PD: no es un diseño responsive.
+  PD: no es un diseño responsive.
 
 
 ## Técnologías ulitizadas para la realización del ejercicio:
