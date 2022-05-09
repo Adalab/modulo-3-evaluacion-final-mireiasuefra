@@ -16,7 +16,7 @@ https://mireiasuefra.github.io/searcher-harry-potter/
 
 - Clone this repo:
   ```shell
-  git clone git@github.com:mireiasuefra/github-search.git
+  git clone git@github.com:mireiasuefra/searcher-harry-potter.git
   ```
 
 - Install dependencies
