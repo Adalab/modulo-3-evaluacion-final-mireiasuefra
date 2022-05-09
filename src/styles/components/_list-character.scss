@@ -9,7 +9,17 @@
     &__not-found {
         font-family: $principal-font;
         color: $color-gryffinfor-1;
-        font-size: 75px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 75px;
+            
+          }
+      
     }
     
 }

@@ -1,9 +1,17 @@
 .filter-house-character {
   display: flex;
+  flex-direction: column;
   font-family: $principal-font;
-  font-size: 40px;
+  color: $color-gryffinfor-3;
+  align-items: center;
+  font-size: 30px;
   justify-content: center;
   margin-top: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    font-size: 40px;
+  }
 
   &__select-serch-house {
     font-family: $principal-font;

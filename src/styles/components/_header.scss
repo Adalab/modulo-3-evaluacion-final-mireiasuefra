@@ -1,6 +1,14 @@
 .header {
-    display: flex;
-    justify-content: center;
-    background-image: url(../../images/bg-header.jpg);
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(../../images/bg-estrellas.jpg);
+
+  &__img {
+    width: 300px;
+    @media (min-width: $breakpoint-tablet) {
+      width: 700px;
+    }
+  }
 }

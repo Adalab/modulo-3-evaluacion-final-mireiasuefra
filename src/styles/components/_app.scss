@@ -1,6 +1,5 @@
 .bg-page {
-  background-image: url(../../images/bg-filters.jpg);
-  background-size: cover;
+  background-image: url(../../images/bg-estrellas.jpg);
   height: 100%;
   min-height: 100vh;
 }
@@ -13,9 +12,16 @@
     
   &__404 {
   
+    text-align: center;
     margin-top: 80px;
-    font-size: 100px;
+    font-size: 30px;
     color: $color-gryffinfor-1;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-top: 80px;
+      font-size: 100px;
+    }
+
   }
 
   &__link {

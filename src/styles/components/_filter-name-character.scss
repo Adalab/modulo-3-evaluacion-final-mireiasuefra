@@ -1,9 +1,17 @@
 .filter-name-character {
+  color: $color-gryffinfor-3;
   display: flex;
+  flex-direction: column;
   font-family: $principal-font;
-  font-size: 40px;
+  font-size: 30px;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
+
+  @media (min-width: $breakpoint-tablet) {
+    flex-direction: row;
+    font-size: 40px;
+  }
 
   &__input-serch-character {
     font-family: $principal-font;
