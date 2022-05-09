@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 
+const DEFAULT_IMG =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqYhuFXrujA0fktSUXTdFeBXEz1Ar7as3KEgwzCMYbWjl8h_a2_BYUdRkyso7suM5bM94&usqp=CAU";
+
 function CardCharacter(props) {
   return (
     <li
@@ -8,10 +11,7 @@ function CardCharacter(props) {
       <Link to={`/character/${props.index}`}>
         <img
           className="card-character__image"
-          src={
-            props.oneCharacter.image ||
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqYhuFXrujA0fktSUXTdFeBXEz1Ar7as3KEgwzCMYbWjl8h_a2_BYUdRkyso7suM5bM94&usqp=CAU"
-          }
+          src={props.oneCharacter.image || DEFAULT_IMG}
           alt="imagen de la card"
         ></img>
       </Link>

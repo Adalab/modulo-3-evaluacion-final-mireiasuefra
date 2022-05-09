@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 
   &__link {
     font-family: $principal-font;
@@ -22,20 +21,16 @@
   }
 
   &__image {
-    width: 90px;
-    height: 170 px;
+    width: 120px;
+    height: 200px;
     border-radius: 60%;
-    margin-right: 10px;
 
     @media (min-width: $breakpoint-tablet) {
       width: 200px;
       height: 330px;
-      border-radius: 60%;
       margin-right: 30px;
     }
   }
-
- 
 
   &__title {
     font-family: $principal-font;
@@ -47,10 +42,7 @@
       font-size: 50px;
       margin-bottom: 30px;
     }
-  
-
   }
-
 
   &__info-name {
     font-family: $title-font;
@@ -86,19 +78,18 @@
     }
   }
 
-
   &__card {
     padding: 20px;
     display: flex;
+    flex-direction: column;
     border-radius: 15px;
     align-items: center;
 
     @media (min-width: $breakpoint-tablet) {
       margin-bottom: 100px;
+      flex-direction: row;
     }
 
-
-  
     &--gryffindor {
       background-color: $color-gryffinfor-1;
       color: $color-gryffinfor-3;

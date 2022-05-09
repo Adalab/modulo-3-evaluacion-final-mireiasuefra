@@ -12,8 +12,11 @@ import {
   faHatWizard,
 } from "@fortawesome/free-solid-svg-icons";
 
+const DEFAULT_IMG =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqYhuFXrujA0fktSUXTdFeBXEz1Ar7as3KEgwzCMYbWjl8h_a2_BYUdRkyso7suM5bM94&usqp=CAU";
+
 function DetailCharacter(props) {
-  //para traducir el genero
+
   const renderGender = () => {
     const gender = props.oneCharacter.gender;
     if (gender === "male") {
@@ -32,16 +35,16 @@ function DetailCharacter(props) {
       return gender;
     }
   };
-  //para traducir si está vivo o muerto
+
   const renderAlive = () => {
     const alive = props.oneCharacter.alive;
-    if (alive === true) {
+    if (alive) {
       return (
         <>
           Vivo <FontAwesomeIcon icon={faHeartbeat} />
         </>
       );
-    } else if (alive === false) {
+    } else {
       return (
         <>
           Muerto <FontAwesomeIcon icon={faDizzy} />
@@ -49,7 +52,7 @@ function DetailCharacter(props) {
       );
     }
   };
-  //para traducir la especie
+
   const renderSpecies = () => {
     const species = props.oneCharacter.species;
 
@@ -93,10 +96,7 @@ function DetailCharacter(props) {
       >
         <img
           className="detail-character__image"
-          src={
-            props.oneCharacter.image ||
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqYhuFXrujA0fktSUXTdFeBXEz1Ar7as3KEgwzCMYbWjl8h_a2_BYUdRkyso7suM5bM94&usqp=CAU"
-          }
+          src={props.oneCharacter.image || DEFAULT_IMG}
           alt="imagen de la card"
         ></img>
         <div className="detail-character__info">

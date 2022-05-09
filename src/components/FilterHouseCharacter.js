@@ -1,14 +1,18 @@
-function Header(props) {
+function FilterHouseCharacter(props) {
+  
+  const handleSearchFilterHouseCharacter = (ev) => {
+    props.setfilterHouseCharacters(ev.currentTarget.value);
+  };
 
   return (
     <div className="filter-house-character">
-      <label className="filter-house-character__serch-house" htmlFor="house">Selecciona la casa:</label>
+      <label className="filter-house-character__search-house" htmlFor="house">Selecciona la casa:</label>
       <select
-        className="filter-house-character__select-serch-house"
+        className="filter-house-character__select-search-house"
         name="house"
         id="house"
         value={props.filterHouseCharacters}
-        onChange={props.handleSearchFilterHouseCharacter}
+        onChange={handleSearchFilterHouseCharacter}
       >
         <option value="gryffindor">Gryffindor</option>
         <option value="slytherin">Slytherin</option>
@@ -19,4 +23,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default FilterHouseCharacter;

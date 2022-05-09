@@ -13,13 +13,16 @@
     font-size: 40px;
   }
 
-  &__input-serch-character {
+  &__input-search-character {
     font-family: $principal-font;
     font-size: 25px;
-    margin-left: 15px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 10px;
     border: none;
+
+    @media (min-width: $breakpoint-tablet) {
+      margin-left: 15px;
+    }
   }
 }
